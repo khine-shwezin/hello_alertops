@@ -1,0 +1,12 @@
+name: rule1
+pack: hello_alertops
+description: Sample rule1 firing on webhook.
+enabled: true
+trigger:
+    type: "core.st2.webhook"
+    parameters:
+      url: "get-echo-from-alertops"
+action:
+    ref: "core.echo"
+    parameters:
+        message: "Yo AlertOps! this is rule1.yaml"

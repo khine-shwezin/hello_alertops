@@ -1,0 +1,12 @@
+name: rule2
+pack: hello_alertops
+description: Sample webhook rule2 calling custom action named action_greet from Action folder.
+enabled: true
+trigger:
+    type: "core.st2.webhook"
+    parameters:
+      url: "get-message-from-alertops"
+action:
+    ref: "hello_alertops.action_greet"
+    parameters:
+        greeting: "Hello AlertOps. This is rule2.yaml, calling action_greet from Action folder"
