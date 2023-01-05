@@ -1,0 +1,13 @@
+---
+name: action_greet
+pack: hello_alertops
+runner_type: "local-shell-script"
+description: "Greet.yaml"
+enabled: true
+entry_point: greet.sh
+parameters:
+    greeting:
+        type: string
+        description: "This is the description from greet.yaml file."
+        required: true
+        position: 1
